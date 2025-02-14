@@ -1,0 +1,163 @@
+{
+    "metals": [
+        {
+            "name": "Bronze",
+            "crafting_dc_modifier": -1,
+            "crafting_cost_modifier": -10,
+            "weapon_effect": "Produces an audible chime when hitting a target, alerting creatures within 10 feet.",
+            "enchanting_bonus": {
+                "thunder_damage": {
+                    "cost": -5,
+                    "time": -5
+                }
+            },
+            "description": "A shiny brown-ish colored metal alloy of tin and copper, known for its resonance.",
+            "cost_per_pound": "5sp",
+            "tools_used": "smithing tools"
+        },
+        {
+            "name": "Silver",
+            "crafting_dc_modifier": 1,
+            "crafting_cost_modifier": 5,
+            "weapon_effect": "Ignores some creature resistances, most notably were-creatures.",
+            "enchanting_bonus": {
+                "cost": -12.5,
+                "time": -12.5
+            },
+            "description": "A common precious metal often used to make coins, especially effective against shapechangers.",
+            "cost_per_pound": "5sp",
+            "tools_used": "smithing tools"
+        },
+        {
+            "name": "Banglum",
+            "crafting_dc_modifier": 2,
+            "crafting_cost_modifier": 20,
+            "weapon_effect": "Deals 1d4 damage to each creature or object (non-held, non-worn) within 5 feet once per turn.",
+            "enchanting_bonus": {
+                "time": -5
+            },
+            "description": "A brown, unstable metal, theorized to be a lesser form of Scoria.",
+            "cost_per_pound": "150gp",
+            "tools_used": "smithing tools"
+        },
+        {
+            "name": "Untempered Arandur",
+            "crafting_dc_modifier": 3,
+            "crafting_cost_modifier": 20,
+            "enchanting_bonus": {
+                "lightning_damage": {
+                    "cost": -15,
+                    "time": -15
+                },
+                "thunder_damage": {
+                    "cost": -15,
+                    "time": -15
+                }
+            },
+            "description": "A blue-green streaked metal appearing in hyaline glass pockets, refined to a silver-blue color.",
+            "cost_per_pound": "300gp",
+            "tools_used": "smithing tools"
+        },
+        {
+            "name": "Cold Iron",
+            "crafting_dc_modifier": 4,
+            "crafting_cost_modifier": 20,
+            "weapon_effect": "Ignores resistances of fey creatures and deals an extra 1d4 damage.",
+            "description": "A precious metal mined in areas touched by dark magic, especially effective against fey.",
+            "cost_per_pound": "300gp",
+            "tools_used": "smithing tools"
+        },
+        {
+            "name": "Ceramite",
+            "crafting_dc_modifier": 5,
+            "crafting_cost_modifier": 20,
+            "weapon_effect": "Bypasses same resistances as Adamantine, deals extra damage to objects.",
+            "enchanting_bonus": {
+                "time": -15
+            },
+            "description": "An alloy known as a ‘poor man’s adamantine’ with strong elemental resistance properties.",
+            "cost_per_pound": "500gp",
+            "tools_used": "smithing tools"
+        },
+        {
+            "name": "Mithril",
+            "crafting_dc_modifier": 5,
+            "crafting_cost_modifier": 25,
+            "weapon_effect": "Weapons lose the heavy property or gain the light property; items weigh half as much.",
+            "enchanting_bonus": {
+                "cost": -10,
+                "dc": -1
+            },
+            "description": "A silver-and-black mineral that becomes silvery-blue when forged, favored by dwarves.",
+            "cost_per_pound": "500gp",
+            "tools_used": "smithing tools"
+        },
+        {
+            "name": "Magnetite",
+            "crafting_dc_modifier": 5,
+            "crafting_cost_modifier": 20,
+            "weapon_effect": "Functions as a compass; deals extra damage when pushing enemies.",
+            "description": "A natural lodestone, valuable to adventurers and navigators.",
+            "cost_per_pound": "600gp",
+            "tools_used": "smithing tools"
+        },
+        {
+            "name": "Electrum",
+            "crafting_dc_modifier": 4,
+            "crafting_cost_modifier": 30,
+            "enchanting_bonus": {
+                "cost": -25,
+                "time": -25
+            },
+            "description": "A highly conductive dull blue metal, widely used for enchanting.",
+            "cost_per_pound": "750gp",
+            "tools_used": "smithing tools"
+        },
+        {
+            "name": "Adamantine",
+            "crafting_dc_modifier": 7,
+            "crafting_cost_modifier": 35,
+            "weapon_effect": "Bypasses resistances; automatically crits on objects.",
+            "enchanting_bonus": {
+                "time": -25
+            },
+            "description": "A jet-black alloy of adamant with unique sheen depending on light source.",
+            "cost_per_pound": "1kgp",
+            "tools_used": "smithing tools"
+        },
+        {
+            "name": "Scoria",
+            "crafting_dc_modifier": "1d12",
+            "crafting_cost_modifier": "2d20",
+            "weapon_effect": "Deals extra fire damage on critical hits; causes fire damage on crit fails.",
+            "description": "A pulsating red-orange unstable metal, dangerous yet powerful.",
+            "cost_per_pound": "2kgp",
+            "tools_used": "smithing tools"
+        },
+        {
+            "name": "Auramite",
+            "crafting_dc_modifier": 6,
+            "crafting_cost_modifier": 30,
+            "weapon_effect": "Forces disadvantage on concentration saves; bypasses certain resistances.",
+            "enchanting_bonus": {
+                "time": -15
+            },
+            "description": "An alloy of meteoric ores and blessed metals, highly effective against extraplanar beings.",
+            "cost_per_pound": "5kgp (sell only)",
+            "tools_used": "smithing tools"
+        },
+        {
+            "name": "Starfall Ore",
+            "crafting_dc_modifier": 10,
+            "crafting_cost_modifier": 100,
+            "weapon_effect": "Indestructible; gains attack bonuses at night and meteor showers.",
+            "enchanting_bonus": {
+                "cost": -10,
+                "time": -10
+            },
+            "description": "The rarest of the three star-born metals, desired by kings and demigods.",
+            "cost_per_pound": "10kgp (sell only)",
+            "tools_used": "smithing tools"
+        }
+    ]
+}
