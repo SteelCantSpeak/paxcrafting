@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weapon Selector</title>
+    <link href="static/styles.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class="container">
+        <h2>Select a Weapon</h2>
+        <select id="weaponSelect" onchange="displayWeaponDetails()">
+            <option value="">-- Choose a Weapon --</option>
+        </select>
+        <div id="weaponDetails"></div>
+    </div>
+    
+    <script>
+        const weapons = [
+            { name: "Dagger", cost: "2 gp", weight: "1 lb.", damage: "1d4", damageType: "Piercing", features: "Finesse, Light, Thrown (20/60)" },
+            { name: "Longsword", cost: "15 gp", weight: "3 lbs.", damage: "1d8", damageType: "Slashing", features: "Versatile (1d10)" },
+            { name: "Greatsword", cost: "50 gp", weight: "6 lbs.", damage: "2d6", damageType: "Slashing", features: "Heavy, Two-Handed" },
+            { name: "Shortbow", cost: "25 gp", weight: "2 lbs.", damage: "1d6", damageType: "Piercing", features: "Ammunition (80/320), Two-Handed" }
+        ];
+
+        const selectElement = document.getElementById("weaponSelect");
+        
+        weapons.forEach(weapon => {
+            let option = document.createElement("option");
+            option.value = weapon.name;
+            option.textContent = weapon.name;
+            selectElement.appendChild(option);
+        });
+
+        function displayWeaponDetails() {
+            const selectedWeapon = selectElement.value;
+            const weapon = weapons.find(w => w.name === selectedWeapon);
+            
+            if (weapon) {
+                document.getElementById("weaponDetails").innerHTML = `
+                    <h3>${weapon.name}</h3>
+                    <p><strong>Cost:</strong> ${weapon.cost}</p>
+                    <p><strong>Weight:</strong> ${weapon.weight}</p>
+                    <p><strong>Damage:</strong> ${weapon.damage} ${weapon.damageType}</p>
+                    <p><strong>Features:</strong> ${weapon.features}</p>
+                `;
+            } else {
+                document.getElementById("weaponDetails").innerHTML = "";
+            }
+        }
+    </script>
+
+<script src="static/script.js" defer></script>
+</body>
+</html>
