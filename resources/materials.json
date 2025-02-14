@@ -32,7 +32,7 @@
             "name": "Banglum",
             "crafting_dc_modifier": 2,
             "crafting_cost_modifier": 20,
-            "weapon_effect": "Deals 1d4 damage to each creature or object (non-held, non-worn) within 5 feet once per turn.",
+            "weapon_effect": "When you hit a creature or object with an attack, once per turn, you can deal 1d4 damage to each creature or object (non-held and non-worn) of your choice within 5 feet of the target. The damage type is the same as the weapon’s damage type",
             "enchanting_bonus": {
                 "time": -5
             },
@@ -44,6 +44,7 @@
             "name": "Untempered Arandur",
             "crafting_dc_modifier": 3,
             "crafting_cost_modifier": 20,
+            "weapon_effect": "",
             "enchanting_bonus": {
                 "lightning_damage": {
                     "cost": -15,
@@ -62,7 +63,7 @@
             "name": "Cold Iron",
             "crafting_dc_modifier": 4,
             "crafting_cost_modifier": 20,
-            "weapon_effect": "Ignores resistances of fey creatures and deals an extra 1d4 damage.",
+            "weapon_effect": "A weapon made from cold iron ignores bludgeoning, slashing, or piercing damage resistances of creatures with the fey subtype and deals an additional 1d4 damage on hits with them ",
             "description": "A precious metal mined in areas touched by dark magic, especially effective against fey.",
             "cost_per_pound": "300gp",
             "tools_used": "smithing tools"
@@ -71,7 +72,7 @@
             "name": "Ceramite",
             "crafting_dc_modifier": 5,
             "crafting_cost_modifier": 20,
-            "weapon_effect": "Bypasses same resistances as Adamantine, deals extra damage to objects.",
+            "weapon_effect": "Bypasses same resistances as Adamantine, deals extra damage to objects.weapons bypass the same monster resistances that Adamantine does, and when you hit an object with a Ceramite weapon you may add double your damage modifier to the damage of the attack, rather than adding it just once.",
             "enchanting_bonus": {
                 "time": -15
             },
@@ -96,15 +97,56 @@
             "name": "Magnetite",
             "crafting_dc_modifier": 5,
             "crafting_cost_modifier": 20,
-            "weapon_effect": "Functions as a compass; deals extra damage when pushing enemies.",
+            "weapon_effect": "A weapon made from magnetite may be used as a compass, as the tip of the weapon orients itself northward. Additionally, if this weapon is used to push an enemy (E.g. a Pushing Attack, Shove action made with a weapon, etc.), the enemy takes 1d4 magical bludgeoning damage per 10 feet forcefully moved.",
             "description": "A natural lodestone, valuable to adventurers and navigators.",
             "cost_per_pound": "600gp",
+            "tools_used": "smithing tools"
+        },
+        {
+            "name": "Impure Siderite",
+            "crafting_dc_modifier": 3,
+            "crafting_cost_modifier": 25,
+            "weapon_effect": "Can be used as a Divine Foci",
+            "enchanting_bonus": {
+                "cost": -5,
+                "time": 0,
+                "radiant_damage": {
+                    "cost": -10,
+                    "time": -10
+                }
+            },"description": "An alloy of blessed metal, silver and gold, uniquely crafted most often by forge clerics.",
+            "cost_per_pound": "650gp",
+            "tools_used": "smithing tools"
+        },
+        {
+            "name": "Ilythiiri Ebony",
+            "crafting_dc_modifier": 5,
+            "crafting_cost_modifier": 25,
+            "weapon_effect": "When you hit a target who is concentrating on a spell, they have disadvantage on the concentration saving throw.",
+            "enchanting_bonus": {
+                "dc": -2
+            },"description": "A jet black metal as an ore, and becomes black with a blue sheen when forged.",
+            "cost_per_pound": "700gp",
+            "tools_used": "smithing tools"
+        },
+        {
+            "name": "Gold",
+            "crafting_dc_modifier": 1,
+            "crafting_cost_modifier": 100,
+            "weapon_effect": "You ignore resistance to non-magical bludgeoning, piercing and slashing damage from incorporeal creatures.",
+            "enchanting_bonus": {
+                "cost": -12.5,
+                "time": -12.5
+            },
+            "description": "Known for its relative softness for a metal, beauty and its resistance to corrosion. As such, it's long enjoyed being associated with purity, wealth and the divine.",
+            "cost_per_pound": "750gp",
             "tools_used": "smithing tools"
         },
         {
             "name": "Electrum",
             "crafting_dc_modifier": 4,
             "crafting_cost_modifier": 30,
+            "weapon_effect": "",
             "enchanting_bonus": {
                 "cost": -25,
                 "time": -25
@@ -144,6 +186,32 @@
             },
             "description": "An alloy of meteoric ores and blessed metals, highly effective against extraplanar beings.",
             "cost_per_pound": "5kgp (sell only)",
+            "tools_used": "smithing tools"
+        },
+        {
+            "name": "Achrondrite",
+            "crafting_dc_modifier": 8,
+            "crafting_cost_modifier": 65,
+            "weapon_effect": "weapons made of achondrite have their normal weapon damage type replaced with fire.",
+            "enchanting_bonus": {
+                "fire_damage":{
+                    "cost":-20,
+                    "time":-20
+                }
+            },
+            "description": "This metal is often confused for a stone, due to its gray coloration and flakey nature.",
+            "cost_per_pound": "5kgp (sell only)",
+            "tools_used": "smithing tools"
+        },
+        {
+            "name": "Tempered Arandur",
+            "crafting_dc_modifier": 4,
+            "crafting_cost_modifier": 25,
+            "weapon_effect": "A weapon made of tempered arandur is immune to any decaying, rusting or rotting effect, even by that of deities.",
+            "enchanting_bonus": {
+            },
+            "description": "A naturally brittle metal, but when tempered in the blood of a red or blue dragon, it dramatically increases the toughness of the weapon.",
+            "cost_per_pound": "6kgp (sell only)",
             "tools_used": "smithing tools"
         },
         {
