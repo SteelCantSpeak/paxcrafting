@@ -11,6 +11,7 @@ const itemDropdown = document.getElementById("itemDetails");
 
 let weapon = null;
 let material = null;
+let materialcategory = null;
 
 weapons.forEach(weapon => {
     let option = document.createElement("option");
@@ -28,7 +29,7 @@ materials.forEach(item => {
 
 document.getElementById("materialCategorySelect").addEventListener('change', function () {
     const selectedMaterialCategory = selectmaterialCategoryElement.value;
-    let materialcategory = materials.find(w => w.name === selectedMaterialCategory);
+    materialcategory = materials.find(w => w.name === selectedMaterialCategory);
 
     selectmaterialElement.innerHTML = '<option value="">-- Choose a Material --</option>';
 
@@ -38,6 +39,9 @@ document.getElementById("materialCategorySelect").addEventListener('change', fun
         option.textContent = item.name;
         selectmaterialElement.appendChild(option);
     });
+
+    material = null;
+    UpdateCalc();
 });
 
 document.getElementById("weaponSelect").addEventListener('change', function () {
@@ -48,7 +52,7 @@ document.getElementById("weaponSelect").addEventListener('change', function () {
 
 document.getElementById("materialSelect").addEventListener('change', function () {
     const selectedMaterial = selectmaterialElement.value;
-    material = metals.find(w => w.name === selectedMaterial);
+    material = materialcategory.contents.find(w => w.name === selectedMaterial);
     UpdateCalc();
 });
 
@@ -60,7 +64,7 @@ function UpdateCalc() {
         itemDropdown.innerHTML = `
             <h3>${item.name}</h3>
             <p><strong>Crafting:</strong> DC${item.crafting_dc} (${item.crafting_tools}).</p>
-            <p><strong>Cost:</strong> ${item.cost} gp.</p>
+            <p><strong>Cost:</strong> ${item.cost}</p>
             <p><strong>Weight:</strong> ${item.weight}</p>
             <p><strong>Damage:</strong> ${item.damage} ${item.damage_type}</p>
             <p><strong>Properties:</strong> ${weapon.type}, ${item.weapon_properties}</p>
@@ -136,17 +140,17 @@ function itemResults(_weapon, _material) {
 
     let item = {
         "name": `${_material.name} ${_weapon.name}`,
-        "cost": `${Math.round(itemCost(_weapon, _material) * 100) / 100}`,
+        "cost": `${(_material.cost_per_pound.includes("priceless"))? `${_weapon.cost}gp. + priceless materials` : `${Math.round(itemCost(_weapon, _material) * 100) / 100}gp.`}`,
         "crafting_dc": `${tierCost(_weapon)["dc"] + _material.crafting_dc_modifier}`,
         "crafting_tools": `${_material.tools_used}`,
-        "weight": `${weight(_weapon.weight) * (_material.weapon_effect.half_weight ? 0.5 : 1)} lbs.`,
+        "weight": `${weight(_weapon.weight) * (_material.weapon_effect.half_weight ? 0.5 : _material.weapon_effect.quarter_weight ? 0.25 : 1)} lbs.`,
         "damage": `${_weapon.damage}`,
         "damage_type": `${(_material.weapon_effect.replace_dmg) ? _material.weapon_effect.replace_dmg : _weapon.damage_type}`,
         "weapon_properties": `${_weapon.properties}`,
         "misc_properties": `${_material.weapon_effect.base}`,
     };
 
-    if (_material.weapon_effect.half_weight) {
+    if (_material.weapon_effect.ultra_light) {
         let newProperties = _weapon.properties;
         for (let index = 0; index < newProperties.length; index++) {
             if (newProperties[index] == "heavy") {

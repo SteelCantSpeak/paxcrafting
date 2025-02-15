@@ -100,7 +100,8 @@
                 "crafting_cost_modifier": 25,
                 "weapon_effect": {
                     "base": "Weapons lose the heavy property or gain the light property; items weigh half as much.",
-                    "half_weight": true
+                    "half_weight": true,
+                    "ultra_light": true
                 },
                 "enchanting_bonus": {
                     "cost": -10,
@@ -313,11 +314,165 @@
     },
     {
         "name": "stones",
-        "contents": []
+        "contents": [
+            {
+                "name": "Floatstone",
+                "crafting_dc_modifier": -1,
+                "crafting_cost_modifier": -20,
+                "weapon_effect": {
+                    "base": "When used in weapon crafting, when you release the weapon, it floats in the air instead of falling. If the weapon has to support any more weight than what the weapon itself weighs, then it falls normally."
+                },
+                "enchanting_bonus": {
+                    "thunder_damage": {
+                        "cost": -10,
+                        "time": -10
+                    },
+                    "lightning_damage": {
+                        "cost": -10,
+                        "time": -10
+                    }
+                },
+                "description": "A weightless stone from the Floating Isles of the north, naturally attuned to the Plane of Air.",
+                "cost_per_pound": "100gp",
+                "tools_used": "mason tools"
+            },
+            {
+                "name": "Spectorium",
+                "crafting_dc_modifier": 6,
+                "crafting_cost_modifier": 50,
+                "weapon_effect": {
+                    "base": "When used in weapon crafting, attacks you make with the weapon ignore half and two-thirds cover if you are within 5 feet of the target."
+                },
+                "enchanting_bonus": {
+                    "cost": -10
+                },
+                "description": "Spectorium is a stone made of hyper compressed ethereal mists, found naturally within ethereal mountain ranges, though it can be made artificially with the proper facility and gear.",
+                "cost_per_pound": "2kgp",
+                "tools_used": "mason tools"
+            },
+            {
+                "name": "Azure Lazulite",
+                "crafting_dc_modifier": 7,
+                "crafting_cost_modifier": 35,
+                "weapon_effect": {
+                    "base": "Items crafted from Azure Lazulite never rust and cannot be destroyed by anything less than a deity. Only weapons and foci can be made from Azure Lazulite. You may use a weapon made from Azure Lazulite to attack an illusion. Make an attack roll against the spellcasters spell save DC. On a hit, the illusion is dispelled as if it was targeted by a successful Dispel Magic."
+                },
+                "enchanting_bonus": {
+                    "cost": -15
+                },
+                "description": "Azure Lazulite is a unique form of the semi-precious lapis lazuli stone.",
+                "cost_per_pound": "5kgp (sell only)",
+                "tools_used": "mason tools"
+            },
+            {
+                "name": "Blackstone",
+                "crafting_dc_modifier": 2,
+                "crafting_cost_modifier": 10,
+                "weapon_effect": {
+                    "base": "Weapons made of blackstone ignore any magical armor class increase (besides enchantments) their target has, but cannot benefit from any magical effect that raises or increases their attack roll (besides enchantments)"
+                },
+                "enchanting_bonus": {
+                    "cost": 5
+                },
+                "description": "Blackstone is a stone that is blacker than pitch, absorbing all light it comes across. Blackstone is a very rare material, infamous among smiths for its anti-magic properties.",
+                "cost_per_pound": "priceless gp",
+                "tools_used": "mason tools"
+            }
+        ]
     },
     {
         "name": "plants",
-        "contents": []
+        "contents": [
+            {
+                "name": "Bark/Wood",
+                "crafting_dc_modifier": 1,
+                "crafting_cost_modifier": -10,
+                "weapon_effect": {
+                    "base": "",
+                    "half_weight": true
+                },
+                "enchanting_bonus": {
+                    "cost": 5
+                },
+                "description": "Standard, mundane bark or wood. Gathered from a tree of your choosing.",
+                "cost_per_pound": "0.02gp",
+                "tools_used": "wood carving tools"
+            },
+            {
+                "name": "Untreated Bronzewood",
+                "crafting_dc_modifier": 4,
+                "crafting_cost_modifier": 15,
+                "weapon_effect": {
+                    "base": "When used in weapon crafting, weapons made from untreated bronzewood can be used as druidic foci. However, they cannot be enchanted with focus enchantments.",
+                    "quarter_weight": true
+                },
+                "enchanting_bonus": {
+                },
+                "description": "Bronzewood is a bronze-colored wood, native to the Southern Isle of Aurum. It is comparable in strength to bronze or brass, but is much lighter.",
+                "cost_per_pound": "10gp",
+                "tools_used": "smithing tools or wood carving tools"
+            },
+            {
+                "name": "Treated Bronzewood",
+                "crafting_dc_modifier": 5,
+                "crafting_cost_modifier": 15,
+                "weapon_effect": {
+                    "base": "When used in weapon crafting, weapons made from treated bronzewood can be used as druidic foci. However, they cannot be enchanted with focus enchantments.",
+                    "quarter_weight": true
+                },
+                "enchanting_bonus": {
+                    "cost":-10,
+                    "time": -5
+                },
+                "description": "Treated Bronzewood has been treated with lakh resin, from the Northern Lakh Bug. This process causes the wood to harden dramatically, making it harder and more durable than steel.",
+                "cost_per_pound": "25gp",
+                "tools_used": "smithing tools or wood carving tools"
+            },
+            {
+                "name": "Elven Leafweave",
+                "crafting_dc_modifier": 2,
+                "crafting_cost_modifier": 20,
+                "weapon_effect": {
+                    "base": ""
+                },
+                "enchanting_bonus": {
+                    "cost":-10,
+                    "time": -10
+                },
+                "description": "Elven leafweave is made from layers of pressed forest leaves, which are then treated with a special alchemical process that makes them tough and flexible.",
+                "cost_per_pound": "50gp",
+                "tools_used": "wood carving tools or herbalism kit"
+            },
+            {
+                "name": "Repentant Thorns",
+                "crafting_dc_modifier": 2,
+                "crafting_cost_modifier": 0,
+                "weapon_effect": {
+                    "base": "Once per turn, you can give yourself advantage on an attack roll with the weapon. When you do so, you take an amount of piercing damage equal to the attack roll’s total"
+                },
+                "enchanting_bonus": {
+                    "cost":-15
+                },
+                "description": "Repentant Thorns are a thick collection of thorn and barb covered vines, wrapped and woven into the shape of a focus, armor or weapon.",
+                "cost_per_pound": "1.5kgp",
+                "tools_used": "wood carving tools"
+            },
+            {
+                "name": "Chlorophyte",
+                "crafting_dc_modifier": 9,
+                "crafting_cost_modifier": 80,
+                "weapon_effect": {
+                    "base": "As an attack with the weapon, you can fire a magical green projectile. Make a ranged spell attack with a range of 90 feet, on a hit, it deals an amount of force damage equal to the weapon’s damage dice plus any damage enchantments."
+                },
+                "enchanting_bonus": {
+                    "cost":-10,
+                    "time" :-10
+                },
+                "description": "Chlorophyte is a dark green, leafy, plant material that’s harder than steel. It’s found deep, deep underground beneath jungles and contains a large amount of druidic energy.",
+                "cost_per_pound": "10kgp (sell only)",
+                "tools_used": "wood carving tools"
+            }
+        ]
     },
     {
         "name": "crystals",
